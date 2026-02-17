@@ -1,209 +1,905 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    body {background-color: #0b0917}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px 'Helvetica Neue'; color: #30ffc1; -webkit-text-stroke: #30ffc1; background-color: #30ffc1; background-color: rgba(48, 255, 193, 0.15)}
-    p.p3 {margin: 0.0px 0.0px 36.0px 0.0px; text-align: center; font: 16.0px 'Helvetica Neue'; color: #8780a9; -webkit-text-stroke: #8780a9}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px 'Helvetica Neue'; color: #585175; -webkit-text-stroke: #585175}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px 'Helvetica Neue'; color: #585175; -webkit-text-stroke: #585175; min-height: 11.0px}
-    p.p7 {margin: 0.0px 0.0px 24.0px 0.0px; text-align: center; font: 13.8px 'Helvetica Neue'; color: #8780a9; -webkit-text-stroke: #8780a9}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.8px 'Helvetica Neue'; color: #8780a9; -webkit-text-stroke: #8780a9}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.8px 'Helvetica Neue'; color: #8780a9; -webkit-text-stroke: #8780a9; min-height: 16.0px}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.8px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #585175; -webkit-text-stroke: #585175}
-    p.p13 {margin: 0.0px 0.0px 36.0px 0.0px; font: 13.2px 'Helvetica Neue'; color: #8780a9; -webkit-text-stroke: #8780a9}
-    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.8px '.Apple Color Emoji UI'; color: #30ffc1; -webkit-text-stroke: #30ffc1}
-    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #30ffc1; -webkit-text-stroke: #30ffc1}
-    p.p17 {margin: 0.0px 0.0px 18.0px 0.0px; font: 11.4px 'Helvetica Neue'; color: #8780a9; -webkit-text-stroke: #8780a9}
-    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #30ffc1; -webkit-text-stroke: #30ffc1; background-color: #30ffc1; background-color: rgba(48, 255, 193, 0.15)}
-    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #30ffc1; -webkit-text-stroke: #30ffc1}
-    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.8px '.Apple Color Emoji UI'; color: #9533f5; -webkit-text-stroke: #9533f5}
-    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #9533f5; -webkit-text-stroke: #9533f5}
-    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #76c3e6; -webkit-text-stroke: #76c3e6; background-color: #76c3e6; background-color: rgba(118, 195, 230, 0.15)}
-    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #9533f5; -webkit-text-stroke: #9533f5}
-    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.8px '.Apple Color Emoji UI'; color: #76c3e6; -webkit-text-stroke: #76c3e6}
-    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #76c3e6; -webkit-text-stroke: #76c3e6}
-    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #9533f5; -webkit-text-stroke: #9533f5; background-color: #6715e8; background-color: rgba(103, 21, 232, 0.3)}
-    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #76c3e6; -webkit-text-stroke: #76c3e6}
-    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px 'Helvetica Neue'; color: #30ffc1; -webkit-text-stroke: #30ffc1}
-    p.p30 {margin: 0.0px 0.0px 18.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #8780a9; -webkit-text-stroke: #8780a9}
-    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2}
-    p.p33 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.2px 'Helvetica Neue'; color: #9533f5; -webkit-text-stroke: #9533f5}
-    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 6.6px 'Helvetica Neue'; color: #30ffc1; -webkit-text-stroke: #30ffc1}
-    p.p35 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px 'Helvetica Neue'; color: #76c3e6; -webkit-text-stroke: #76c3e6}
-    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px 'Helvetica Neue'; color: #585175; -webkit-text-stroke: #585175}
-    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2; min-height: 15.0px}
-    p.p38 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2; background-color: #343434; min-height: 15.0px}
-    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2; background-color: #30ffc1; min-height: 10.0px}
-    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2}
-    p.p41 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.8px 'Helvetica Neue'; color: #9533f5; -webkit-text-stroke: #9533f5}
-    p.p42 {margin: 0.0px 0.0px 0.0px 0.0px; font: 8.4px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2; background-color: #30ffc1; background-color: rgba(48, 255, 193, 0.1)}
-    p.p44 {margin: 0.0px 126.0px 36.0px 126.0px; text-align: center; text-indent: -126.0px; font: 13.2px 'Helvetica Neue'; color: #8780a9; -webkit-text-stroke: #8780a9}
-    p.p45 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.4px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2; min-height: 13.0px}
-    p.p46 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 8.4px 'Helvetica Neue'; color: #585175; -webkit-text-stroke: #585175}
-    p.p47 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.4px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2}
-    p.p48 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.6px 'Helvetica Neue'; color: #585175; -webkit-text-stroke: #585175}
-    li.li31 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.8px 'Helvetica Neue'; color: #8780a9; -webkit-text-stroke: #8780a9}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; color: #ffffff; background-color: #6715e8; -webkit-text-stroke: 0px #ffffff}
-    span.s3 {font-kerning: none; color: #ececf2; -webkit-text-stroke: 0px #ececf2}
-    span.s4 {font-kerning: none; background-color: rgba(48, 255, 193, 0.15)}
-    span.s5 {font-kerning: none; background-color: #100c26}
-    span.s6 {font-kerning: none; background-color: rgba(103, 21, 232, 0.3)}
-    span.s7 {font-kerning: none; background-color: rgba(118, 195, 230, 0.15)}
-    span.s8 {font-kerning: none; background-color: rgba(16, 12, 38, 0.6)}
-    span.s9 {background-color: rgba(16, 12, 38, 0.6); -webkit-text-stroke: 0px #000000}
-    span.s10 {font: 12.0px 'Helvetica Neue'; font-kerning: none; color: #ececf2; background-color: rgba(16, 12, 38, 0.6); -webkit-text-stroke: 0px #ececf2}
-    span.s11 {font-kerning: none; background-color: rgba(255, 255, 255, 0.031)}
-    span.s12 {font: 6.6px 'Helvetica Neue'; font-kerning: none; color: #30ffc1; background-color: rgba(48, 255, 193, 0.15); -webkit-text-stroke: 0px #30ffc1}
-    span.s13 {font: 6.6px 'Helvetica Neue'; font-kerning: none; color: #76c3e6; background-color: rgba(118, 195, 230, 0.15); -webkit-text-stroke: 0px #76c3e6}
-    span.s14 {font: 6.6px 'Apple SD Gothic Neo'; font-kerning: none; color: #9533f5; background-color: rgba(103, 21, 232, 0.3); -webkit-text-stroke: 0px #9533f5}
-    span.s15 {font-kerning: none; background-color: rgba(103, 21, 232, 0.078)}
-    span.s16 {font: 10.2px 'Helvetica Neue'; font-kerning: none; color: #ececf2; background-color: rgba(103, 21, 232, 0.078); -webkit-text-stroke: 0px #ececf2}
-    span.s17 {font-kerning: none; color: #76c3e6; background-color: rgba(118, 195, 230, 0.15); -webkit-text-stroke: 0px #76c3e6}
-    span.s18 {font: 10.2px 'Helvetica Neue'; font-kerning: none; color: #ececf2; background-color: rgba(255, 255, 255, 0.031); -webkit-text-stroke: 0px #ececf2}
-    span.s19 {font-kerning: none; background-color: rgba(255, 255, 255, 0.051)}
-    span.s20 {font-kerning: none; color: #fc4d54; background-color: rgba(252, 22, 39, 0.15); -webkit-text-stroke: 0px #fc4d54}
-    span.s21 {font: 12.0px 'Helvetica Neue'; font-kerning: none; background-color: #100c26}
-    span.s22 {font-kerning: none; color: #30ffc1; -webkit-text-stroke: 0px #30ffc1}
-    span.s23 {font-kerning: none; color: #9533f5; background-color: rgba(149, 51, 245, 0.15); -webkit-text-stroke: 0px #9533f5}
-    span.s24 {font-kerning: none; color: #76c3e6; background-color: rgba(118, 195, 230, 0.1); -webkit-text-stroke: 0px #76c3e6}
-    span.s25 {font-kerning: none; color: #fd9a35; background-color: rgba(253, 154, 9, 0.1); -webkit-text-stroke: 0px #fd9a35}
-    span.s26 {font-kerning: none; color: #8780a9; background-color: rgba(255, 255, 255, 0.051); -webkit-text-stroke: 0px #8780a9}
-    span.s27 {font-kerning: none; color: #fc4d54; background-color: rgba(252, 22, 39, 0.1); -webkit-text-stroke: 0px #fc4d54}
-    span.s28 {font-kerning: none; background-color: rgba(255, 255, 255, 0.078)}
-    span.s29 {font: 8.4px 'STIX Two Math'; font-kerning: none; color: #fc2a35; background-color: rgba(10, 10, 10, 0.8); -webkit-text-stroke: 0px #fc2a35}
-    span.s30 {font-kerning: none; color: #fc2a35; background-color: rgba(10, 10, 10, 0.8); -webkit-text-stroke: 0px #fc2a35}
-    span.s31 {font: 9.6px 'Helvetica Neue'; font-kerning: none; color: #8780a9; background-color: transparent; -webkit-text-stroke: 0px #8780a9}
-    ul.ul1 {list-style-type: none}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gwava — Live Performance Suite</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #0c0a1f;
+    --bg-card: #141033;
+    --bg-card-hover: #1a1545;
+    --purple: #7c3aed;
+    --purple-bright: #a855f7;
+    --purple-glow: rgba(124, 58, 237, 0.3);
+    --cyan: #2affcc;
+    --cyan-dim: rgba(42, 255, 204, 0.15);
+    --blue: #87ceeb;
+    --blue-dim: rgba(135, 206, 235, 0.15);
+    --red-indicator: #ff4444;
+    --text-primary: #f0f0f5;
+    --text-secondary: #9994b8;
+    --text-muted: #6b6588;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg-deep);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* === HERO === */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, var(--purple-glow) 0%, transparent 70%);
+    top: -200px; left: 50%; transform: translateX(-50%);
+    pointer-events: none;
+    animation: pulse-glow 6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.4; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.7; transform: translateX(-50%) scale(1.1); }
+  }
+
+  .hero-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    background: var(--cyan-dim);
+    padding: 0.4rem 1.2rem;
+    border-radius: 100px;
+    border: 1px solid rgba(42, 255, 204, 0.2);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.8s ease-out;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.8s ease-out 0.1s both;
+  }
+
+  .hero h1 .gwava { color: var(--text-primary); }
+  .hero h1 .suite {
+    background: linear-gradient(135deg, var(--purple-bright), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-secondary);
+    max-width: 600px;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.8s ease-out 0.2s both;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.8s ease-out 0.3s both;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2rem;
+    border-radius: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--purple);
+    color: white;
+    box-shadow: 0 4px 24px var(--purple-glow);
+  }
+  .btn-primary:hover {
+    background: var(--purple-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px var(--purple-glow);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+  .btn-outline:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* === SCROLL INDICATOR === */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: bounce 2s ease infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* === SECTIONS === */
+  section { padding: 6rem 2rem; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 640px;
+    font-weight: 300;
+    margin-bottom: 3rem;
+  }
+
+  /* === AUDIENCE CARDS === */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .audience-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  .audience-card:hover {
+    border-color: rgba(255,255,255,0.15);
+    transform: translateY(-4px);
+  }
+  .audience-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .audience-card.gig::before { background: linear-gradient(90deg, var(--cyan), var(--cyan)); }
+  .audience-card.combo::before { background: linear-gradient(90deg, var(--cyan), var(--purple-bright)); }
+  .audience-card.cues::before { background: linear-gradient(90deg, var(--blue), var(--purple-bright)); }
+
+  .card-icon {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .gig .card-icon { background: var(--cyan-dim); color: var(--cyan); }
+  .combo .card-icon { background: var(--purple-glow); color: var(--purple-bright); }
+  .cues .card-icon { background: var(--blue-dim); color: var(--blue); }
+
+  .card-persona {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .gig .card-persona { color: var(--cyan); }
+  .combo .card-persona { color: var(--purple-bright); }
+  .cues .card-persona { color: var(--blue); }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+
+  .card-apps {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .app-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  .app-tag.gig-tag { background: var(--cyan-dim); color: var(--cyan); border: 1px solid rgba(42,255,204,0.2); }
+  .app-tag.light-tag { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(135,206,235,0.2); }
+  .app-tag.cues-tag { background: var(--purple-glow); color: var(--purple-bright); border: 1px solid rgba(168,85,247,0.2); }
+
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+  }
+  .gig .card-link { color: var(--cyan); }
+  .combo .card-link { color: var(--purple-bright); }
+  .cues .card-link { color: var(--blue); }
+  .card-link:hover { gap: 0.8rem; }
+
+  /* === APP FEATURES === */
+  .apps-section { background: rgba(20, 16, 51, 0.6); }
+
+  .app-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .app-row:last-child { border-bottom: none; }
+  .app-row.reverse { direction: rtl; }
+  .app-row.reverse > * { direction: ltr; }
+
+  .app-name-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .app-name-badge.gig-b { background: var(--cyan-dim); color: var(--cyan); }
+  .app-name-badge.light-b { background: var(--blue-dim); color: var(--blue); }
+  .app-name-badge.cues-b { background: var(--purple-glow); color: var(--purple-bright); }
+
+  .app-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .app-desc {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  .feature-list li::before {
+    content: '→';
+    color: var(--purple-bright);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .app-visual {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Pad grid mockup */
+  .pad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 280px;
+  }
+  .pad {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  .pad:hover { transform: scale(1.05); }
+  .pad.active { animation: pad-flash 0.6s ease; }
+  @keyframes pad-flash {
+    0% { filter: brightness(1); }
+    50% { filter: brightness(1.8); }
+    100% { filter: brightness(1); }
+  }
+
+  /* Song list mockup */
+  .song-mock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .song-row {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+  .song-num {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    width: 20px;
+  }
+  .song-title-mock { font-weight: 500; flex: 1; }
+  .song-icons { display: flex; gap: 0.4rem; }
+  .song-icon {
+    width: 18px; height: 18px;
+    border-radius: 4px;
+    font-size: 0.55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* DMX channel mockup */
+  .dmx-mock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .dmx-fixture {
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+  }
+  .dmx-channel {
+    flex: 1;
+    border-radius: 3px 3px 0 0;
+    min-width: 12px;
+    transition: height 0.5s ease;
+  }
+  .dmx-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+  }
+
+  /* === DOWNLOAD CTA === */
+  .download-section {
+    text-align: center;
+    padding: 8rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .download-section::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, var(--purple-glow) 0%, transparent 70%);
+    bottom: -200px; left: 50%; transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .download-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .download-desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+  }
+
+  .store-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.8rem;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-primary);
+  }
+  .store-btn:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .store-btn .store-app-name { font-weight: 700; }
+  .store-btn .store-sub {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+  .store-btn-inner { display: flex; flex-direction: column; }
+
+  .store-btn.gig-store:hover { border-color: var(--cyan); box-shadow: 0 8px 32px rgba(42,255,204,0.1); }
+  .store-btn.light-store:hover { border-color: var(--blue); box-shadow: 0 8px 32px rgba(135,206,235,0.1); }
+  .store-btn.cues-store:hover { border-color: var(--purple-bright); box-shadow: 0 8px 32px rgba(168,85,247,0.1); }
+
+  /* === FOOTER === */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--text-primary); }
+
+  /* === MARKETING SECTION === */
+  .marketing-section {
+    background: linear-gradient(180deg, var(--bg-deep), rgba(20,16,51,0.8), var(--bg-deep));
+    padding: 6rem 2rem;
+  }
+
+  .marketing-text {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .marketing-text p {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  .marketing-text p:last-child { margin-bottom: 0; }
+
+  .highlight { color: var(--text-primary); font-weight: 500; }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 768px) {
+    .app-row { grid-template-columns: 1fr; gap: 2rem; }
+    .app-row.reverse { direction: ltr; }
+    .audience-grid { grid-template-columns: 1fr; }
+    section { padding: 4rem 1.5rem; }
+  }
+
+  /* Status indicator */
+  .dmx-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .dmx-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 6px var(--cyan);
+    animation: status-blink 2s ease infinite;
+  }
+  @keyframes status-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+</style>
 </head>
 <body>
-<p class="p1"><span class="s1">MACOS · LIVE PERFORMANCE SUITE</span></p>
-<h1 style="margin: 0.0px 0.0px 18.0px 0.0px; text-align: center; font: 64.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s1">Gwava<br>
-Live Suite</span></h1>
-<p class="p3"><span class="s1">Professional backing tracks, synchronized video, and DMX lighting — controlled from your Mac. Three apps, one seamless performance.</span></p>
-<p class="p4"><span class="s2">Find Your Setup</span><span class="s1"> Download on the App Store</span></p>
-<p class="p5"><span class="s1">SCROLL</span></p>
-<p class="p6"><span class="s1"></span><br></p>
-<p class="p7"><span class="s3">Every live performance deserves more than "good enough."</span><span class="s1"> The Gwava suite gives bands, solo artists, and sound engineers a professional-grade toolkit for running backing tracks, synchronizing video to an external display, and controlling DMX lighting — all from a single Mac. Whether you're a three-piece playing pub gigs with click tracks or a touring act with a full lighting rig, Gwava scales to your ambition without the learning curve of enterprise lighting desks.</span></p>
-<p class="p7"><span class="s3">GwavaGIG</span><span class="s1"> is your performance cockpit: organize songs into setlists, trigger audio with waveform monitoring, send video to a second screen, and fire MIDI-driven lighting cues — all with panic-stop safety and auto-follow so you never lose momentum mid-set. </span><span class="s3">GwavaLIGHT</span><span class="s1"> is where you design the show: build fixture profiles, map DMX addresses, paint scenes with per-channel colour control, and chain them into tempo-synced chases. Every project shares data instantly between apps.</span></p>
-<p class="p8"><span class="s3">GwavaCUES</span><span class="s1"> puts a 16-pad touchboard in the hands of anyone running lights. Map each pad to a scene or chase, swipe through five banks of cues, and trigger DMX output to an ENTTEC adapter with a single tap — no MIDI controller hardware required. Together, the three apps replace a rack of gear with something that fits in a laptop bag.<span class="Apple-converted-space"> </span></span></p>
-<p class="p9"><span class="s1"></span><br></p>
-<p class="p10"><span class="s1">Your audience won't know it's just one Mac. They'll just know the show was incredible.</span></p>
-<p class="p11"><span class="s1">WHO IS GWAVA FOR?</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s1">Pick your path</span></h2>
-<p class="p13"><span class="s1">Whether you need backing tracks, a full AV show, or hands-on lighting control — there's a Gwava setup built for you.</span></p>
-<p class="p14"><span class="s4">🎵</span></p>
-<p class="p15"><span class="s5">BANDS &amp; SOLO ARTISTS</span></p>
-<h3 style="margin: 0.0px 0.0px 9.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s5">Backing Tracks &amp; Video</span></h3>
-<p class="p17"><span class="s5">You need rock-solid audio playback with optional video on a second screen. Organize songs into setlists, add auto-follow for seamless transitions, and use panic stop when things go sideways. No lighting knowledge needed.</span></p>
-<p class="p18"><span class="s1">GwavaGIG</span></p>
-<p class="p19"><span class="s5">Get started</span></p>
-<p class="p19"><span class="s5">→</span></p>
-<p class="p20"><span class="s6">🎸</span></p>
-<p class="p21"><span class="s5">BANDS WITH A LIGHT SHOW</span></p>
-<h3 style="margin: 0.0px 0.0px 9.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s5">Audio + Video + DMX Lighting</span></h3>
-<p class="p17"><span class="s5">Design lighting scenes and chases in GwavaLIGHT, embed MIDI cues in your tracks, and let GwavaGIG fire everything in sync — audio, video on an external display, and DMX to your ENTTEC adapter. One Mac runs the whole show.</span></p>
-<p class="p18"><span class="s1">GwavaGIG</span></p>
-<p class="p22"><span class="s1">GwavaLIGHT</span></p>
-<p class="p23"><span class="s5">Get started</span></p>
-<p class="p23"><span class="s5">→</span></p>
-<p class="p24"><span class="s7">🎛️</span></p>
-<p class="p25"><span class="s5">SOUND ENGINEERS &amp; LD OPERATORS</span></p>
-<h3 style="margin: 0.0px 0.0px 9.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s5">Hands-On Lighting Control</span></h3>
-<p class="p17"><span class="s5">Tired of leaving your lights on "sound-activated"? Design proper scenes in GwavaLIGHT, then trigger them live with GwavaCUES — a 16-pad touchboard with 5 banks. Tap pads to fire scenes or BPM-synced chases via DMX. No MIDI controller needed.</span></p>
-<p class="p22"><span class="s1">GwavaLIGHT</span></p>
-<p class="p26"><span class="s1">GwavaCUES</span></p>
-<p class="p27"><span class="s5">Get started</span></p>
-<p class="p27"><span class="s5">→</span></p>
-<p class="p11"><span class="s8">THE APPS</span></p>
-<h2 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s8">Three apps. One performance.</span></h2>
-<p class="p13"><span class="s8">Each app does one thing exceptionally well. Together, they replace a rack of gear.</span></p>
-<p class="p28"><span class="s4">GWAVAGIG</span></p>
-<h3 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 24.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s8">Your performance cockpit</span></h3>
-<p class="p30"><span class="s8">Manage your song library across multiple bands, build setlists with drag-and-drop, and perform with synchronized audio, video, and DMX lighting. Waveform display, auto-follow, quicklists, and a configurable panic stop keep you in control.</span></p>
-<ul class="ul1">
-  <li class="li31"><span class="s9"></span><span class="s8">Multi-project song library with pinning &amp; search</span><span class="s10"> </span><span class="s8">Setlists with auto-follow &amp; outro designation</span><span class="s10"> </span><span class="s8">Audio waveform visualization during playback</span><span class="s10"> </span><span class="s8">Video output to external display (HDMI)</span><span class="s10"> </span><span class="s8">MIDI-driven DMX lighting via ENTTEC USB</span><span class="s10"> </span><span class="s8">Backup &amp; restore (GWA/GWG/GWM formats)</span><span class="s10"> </span><span class="s8">Configurable keyboard shortcuts &amp; panic stop</span></li>
-</ul>
-<p class="p11"><span class="s11">01</span></p>
-<p class="p32"><span class="s11">Enter Sandman</span></p>
-<p class="p32"><span class="s12">♪</span><span class="s11"> </span><span class="s13">▶</span><span class="s11"> </span><span class="s14">◈</span></p>
-<p class="p21"><span class="s15">02</span></p>
-<p class="p33"><span class="s15">▶ Thunderstruck</span></p>
-<p class="p34"><span class="s4">♪</span><span class="s16"> </span><span class="s17">▶</span></p>
-<p class="p11"><span class="s11">03</span></p>
-<p class="p32"><span class="s11">Livin' on a Prayer</span></p>
-<p class="p34"><span class="s4">♪</span></p>
-<p class="p11"><span class="s11">04</span></p>
-<p class="p32"><span class="s11">Sweet Child O' Mine</span></p>
-<p class="p34"><span class="s4">♪</span><span class="s18"> </span><span class="s14">◈</span></p>
-<p class="p11"><span class="s11">05</span></p>
-<p class="p32"><span class="s11">— Outro —</span></p>
-<p class="p34"><span class="s4">♪</span></p>
-<p class="p35"><span class="s7">GWAVALIGHT</span></p>
-<h3 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 24.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s8">Design the light show</span></h3>
-<p class="p30"><span class="s8">Build fixture profiles from templates, assign DMX addresses with overlap validation, paint scenes per-channel with quick colours, and chain scenes into BPM-synced chases. Every change is instantly shared with GwavaGIG and GwavaCUES via a shared data container.</span></p>
-<ul class="ul1">
-  <li class="li31"><span class="s9"></span><span class="s8">Fixture profile library with channel mapping</span><span class="s10"> </span><span class="s8">DMX address assignment with collision detection</span><span class="s10"> </span><span class="s8">Per-channel scene design (0–255) with quick colours</span><span class="s10"> </span><span class="s8">Chases: sequence scenes with tempo-synced playback</span><span class="s10"> </span><span class="s8">MIDI note assignment (C-2 to G8) per scene &amp; chase</span><span class="s10"> </span><span class="s8">Scene Themes for organizing lighting by mood</span><span class="s10"> </span><span class="s8">Real-time DMX preview via ENTTEC USB Pro</span></li>
-</ul>
-<p class="p36"><span class="s5">FRONT WASH — 8ch</span></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p38"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p36"><span class="s5">REAR PAR — 4ch</span></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p36"><span class="s5">MOVERS — 12ch</span></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p38"><span class="s1"></span><br></p>
-<p class="p38"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p37"><span class="s1"></span><br></p>
-<p class="p39"><span class="s1"></span><br></p>
-<p class="p40"><span class="s19">DMX</span></p>
-<p class="p41"><span class="s6">GWAVACUES</span></p>
-<h3 style="margin: 0.0px 0.0px 12.0px 0.0px; font: 24.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s8">Trigger lights live</span></h3>
-<p class="p30"><span class="s8">A 16-pad touchboard on your screen — mapped to the scenes and chases you designed in GwavaLIGHT. Swipe through five banks (80 cues total), set BPM for chase speed, and tap to fire DMX output. Dark and light themes with customizable pad colours. Pad 1 is always Blackout.</span></p>
-<ul class="ul1">
-  <li class="li31"><span class="s9"></span><span class="s8">4×4 touch-pad grid mapped to scenes &amp; chases</span><span class="s10"> </span><span class="s8">5 banks of 16 pads (80 cues per project)</span><span class="s10"> </span><span class="s8">BPM-synced chase playback with speed multiplier</span><span class="s10"> </span><span class="s8">Custom pad colours and bank names</span><span class="s10"> </span><span class="s8">Dark &amp; light themes</span><span class="s10"> </span><span class="s8">DMX output via ENTTEC USB — no MIDI hardware needed</span></li>
-</ul>
-<p class="p42"><span class="s20">SOLO</span><span class="s21"> </span><span class="s22">VERSE</span><span class="s21"> </span><span class="s23">CHORUS</span><span class="s21"> </span><span class="s24">BRIDGE</span><span class="s21"> </span><span class="s25">WARM</span><span class="s21"> </span><span class="s22">COOL</span><span class="s21"> </span><span class="s23">STROBE</span><span class="s21"> </span><span class="s26">SLOW</span><span class="s21"> </span><span class="s27">FIRE</span><span class="s21"> </span><span class="s22">OCEAN</span><span class="s21"> </span><span class="s24">UV</span><span class="s21"> </span><span class="s28">WHITE</span><span class="s21"> </span><span class="s23">CHASE1</span><span class="s21"> </span><span class="s25">CHASE2</span><span class="s21"> </span><span class="s22">CHASE3</span><span class="s21"> </span><span class="s29">⬤</span><span class="s30"> BO</span></p>
-<p class="p39"><span class="s1"></span><br></p>
-<p class="p40"><span class="s19">BANK 1</span></p>
-<h2 style="margin: 0.0px 0.0px 18.0px 0.0px; text-align: center; font: 40.0px 'Helvetica Neue'; color: #ececf2; -webkit-text-stroke: #ececf2"><span class="s1">Ready to level up<br>
-your show?</span></h2>
-<p class="p44"><span class="s1">All three apps are available on the Mac App Store. Start with the one that fits your setup — they share data automatically.</span></p>
-<p class="p45"><span class="s1"></span><br></p>
-<p class="p46"><span class="s5">Download</span></p>
-<p class="p47"><span class="s5">GwavaGIG</span></p>
-<p class="p45"><span class="s1"></span><br></p>
-<p class="p46"><span class="s5">Download</span></p>
-<p class="p47"><span class="s5">GwavaLIGHT</span></p>
-<p class="p45"><span class="s1"></span><br></p>
-<p class="p46"><span class="s5">Download</span></p>
-<p class="p47"><span class="s5">GwavaCUES</span></p>
-<p class="p48"><span class="s1">© 2026 IG Labs · <a href="mailto:ian.gotts@gmail.com"><span class="s31">Contact</span></a> · Built for musicians, by musicians.</span></p>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">macOS · Live Performance Suite</div>
+  <h1><span class="gwava">Gwava</span><br><span class="suite">Live Suite</span></h1>
+  <p class="hero-sub">Professional backing tracks, synchronized video, and DMX lighting — controlled from your Mac. Three apps, one seamless performance.</p>
+  <div class="hero-cta">
+    <a href="#audiences" class="btn btn-primary">Find Your Setup</a>
+    <a href="#download" class="btn btn-outline">Download on the App Store</a>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- MARKETING COPY -->
+<section class="marketing-section">
+  <div class="marketing-text">
+    <p><span class="highlight">Every live performance deserves more than "good enough."</span> The Gwava suite gives bands, solo artists, and sound engineers a professional-grade toolkit for running backing tracks, synchronizing video to an external display, and controlling DMX lighting — all from a single Mac. Whether you're a three-piece playing pub gigs with click tracks or a touring act with a full lighting rig, Gwava scales to your ambition without the learning curve of enterprise lighting desks.</p>
+    <p><span class="highlight">GwavaGIG</span> is your performance cockpit: organize songs into setlists, trigger audio with waveform monitoring, send video to a second screen, and fire MIDI-driven lighting cues — all with panic-stop safety and auto-follow so you never lose momentum mid-set. <span class="highlight">GwavaLIGHT</span> is where you design the show: build fixture profiles, map DMX addresses, paint scenes with per-channel colour control, and chain them into tempo-synced chases. Every project shares data instantly between apps.</p>
+    <p><span class="highlight">GwavaCUES</span> puts a 16-pad touchboard in the hands of anyone running lights. Map each pad to a scene or chase, swipe through five banks of cues, and trigger DMX output to an ENTTEC adapter with a single tap — no MIDI controller hardware required. Together, the three apps replace a rack of gear with something that fits in a laptop bag. <span class="highlight">Your audience won't know it's just one Mac. They'll just know the show was incredible.</span></p>
+  </div>
+</section>
+
+<!-- AUDIENCE SECTION -->
+<section id="audiences">
+  <div class="container">
+    <div class="section-label">Who is Gwava for?</div>
+    <h2 class="section-title">Pick your path</h2>
+    <p class="section-desc">Whether you need backing tracks, a full AV show, or hands-on lighting control — there's a Gwava setup built for you.</p>
+
+    <div class="audience-grid">
+      <!-- Audience 1: Band with backing tracks -->
+      <div class="audience-card gig">
+        <div class="card-icon">🎵</div>
+        <div class="card-persona">Bands &amp; Solo Artists</div>
+        <h3 class="card-title">Backing Tracks &amp; Video</h3>
+        <p class="card-desc">You need rock-solid audio playback with optional video on a second screen. Organize songs into setlists, add auto-follow for seamless transitions, and use panic stop when things go sideways. No lighting knowledge needed.</p>
+        <div class="card-apps">
+          <span class="app-tag gig-tag">GwavaGIG</span>
+        </div>
+        <a href="#download" class="card-link">Get started <span>→</span></a>
+      </div>
+
+      <!-- Audience 2: Band with full AV + lighting -->
+      <div class="audience-card combo">
+        <div class="card-icon">🎸</div>
+        <div class="card-persona">Bands with a Light Show</div>
+        <h3 class="card-title">Audio + Video + DMX Lighting</h3>
+        <p class="card-desc">Design lighting scenes and chases in GwavaLIGHT, embed MIDI cues in your tracks, and let GwavaGIG fire everything in sync — audio, video on an external display, and DMX to your ENTTEC adapter. One Mac runs the whole show.</p>
+        <div class="card-apps">
+          <span class="app-tag gig-tag">GwavaGIG</span>
+          <span class="app-tag light-tag">GwavaLIGHT</span>
+        </div>
+        <a href="#download" class="card-link">Get started <span>→</span></a>
+      </div>
+
+      <!-- Audience 3: Sound engineer with lights -->
+      <div class="audience-card cues">
+        <div class="card-icon">🎛️</div>
+        <div class="card-persona">Sound Engineers &amp; LD Operators</div>
+        <h3 class="card-title">Hands-On Lighting Control</h3>
+        <p class="card-desc">Tired of leaving your lights on "sound-activated"? Design proper scenes in GwavaLIGHT, then trigger them live with GwavaCUES — a 16-pad touchboard with 5 banks. Tap pads to fire scenes or BPM-synced chases via DMX. No MIDI controller needed.</p>
+        <div class="card-apps">
+          <span class="app-tag light-tag">GwavaLIGHT</span>
+          <span class="app-tag cues-tag">GwavaCUES</span>
+        </div>
+        <a href="#download" class="card-link">Get started <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP DETAILS -->
+<section class="apps-section" id="apps">
+  <div class="container">
+    <div class="section-label">The Apps</div>
+    <h2 class="section-title">Three apps. One performance.</h2>
+    <p class="section-desc">Each app does one thing exceptionally well. Together, they replace a rack of gear.</p>
+
+    <!-- GwavaGIG -->
+    <div class="app-row">
+      <div>
+        <span class="app-name-badge gig-b">GwavaGIG</span>
+        <h3 class="app-title">Your performance cockpit</h3>
+        <p class="app-desc">Manage your song library across multiple bands, build setlists with drag-and-drop, and perform with synchronized audio, video, and DMX lighting. Waveform display, auto-follow, quicklists, and a configurable panic stop keep you in control.</p>
+        <ul class="feature-list">
+          <li>Multi-project song library with pinning &amp; search</li>
+          <li>Setlists with auto-follow &amp; outro designation</li>
+          <li>Audio waveform visualization during playback</li>
+          <li>Video output to external display (HDMI)</li>
+          <li>MIDI-driven DMX lighting via ENTTEC USB</li>
+          <li>Backup &amp; restore (GWA/GWG/GWM formats)</li>
+          <li>Configurable keyboard shortcuts &amp; panic stop</li>
+        </ul>
+      </div>
+      <div class="app-visual">
+        <div class="song-mock">
+          <div class="song-row">
+            <span class="song-num">01</span>
+            <span class="song-title-mock">Enter Sandman</span>
+            <div class="song-icons">
+              <span class="song-icon" style="background:var(--cyan-dim);color:var(--cyan);">♪</span>
+              <span class="song-icon" style="background:var(--blue-dim);color:var(--blue);">▶</span>
+              <span class="song-icon" style="background:var(--purple-glow);color:var(--purple-bright);">◈</span>
+            </div>
+          </div>
+          <div class="song-row" style="border-color: var(--purple); background: rgba(124,58,237,0.08);">
+            <span class="song-num" style="color:var(--purple-bright);">02</span>
+            <span class="song-title-mock" style="color:var(--purple-bright);">▶ Thunderstruck</span>
+            <div class="song-icons">
+              <span class="song-icon" style="background:var(--cyan-dim);color:var(--cyan);">♪</span>
+              <span class="song-icon" style="background:var(--blue-dim);color:var(--blue);">▶</span>
+            </div>
+          </div>
+          <div class="song-row">
+            <span class="song-num">03</span>
+            <span class="song-title-mock">Livin' on a Prayer</span>
+            <div class="song-icons">
+              <span class="song-icon" style="background:var(--cyan-dim);color:var(--cyan);">♪</span>
+            </div>
+          </div>
+          <div class="song-row">
+            <span class="song-num">04</span>
+            <span class="song-title-mock">Sweet Child O' Mine</span>
+            <div class="song-icons">
+              <span class="song-icon" style="background:var(--cyan-dim);color:var(--cyan);">♪</span>
+              <span class="song-icon" style="background:var(--purple-glow);color:var(--purple-bright);">◈</span>
+            </div>
+          </div>
+          <div class="song-row" style="opacity:0.5;">
+            <span class="song-num">05</span>
+            <span class="song-title-mock" style="font-style:italic;">— Outro —</span>
+            <div class="song-icons">
+              <span class="song-icon" style="background:var(--cyan-dim);color:var(--cyan);">♪</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GwavaLIGHT -->
+    <div class="app-row reverse">
+      <div>
+        <span class="app-name-badge light-b">GwavaLIGHT</span>
+        <h3 class="app-title">Design the light show</h3>
+        <p class="app-desc">Build fixture profiles from templates, assign DMX addresses with overlap validation, paint scenes per-channel with quick colours, and chain scenes into BPM-synced chases. Every change is instantly shared with GwavaGIG and GwavaCUES via a shared data container.</p>
+        <ul class="feature-list">
+          <li>Fixture profile library with channel mapping</li>
+          <li>DMX address assignment with collision detection</li>
+          <li>Per-channel scene design (0–255) with quick colours</li>
+          <li>Chases: sequence scenes with tempo-synced playback</li>
+          <li>MIDI note assignment (C-2 to G8) per scene &amp; chase</li>
+          <li>Scene Themes for organizing lighting by mood</li>
+          <li>Real-time DMX preview via ENTTEC USB Pro</li>
+        </ul>
+      </div>
+      <div class="app-visual">
+        <div class="dmx-mock">
+          <div class="dmx-label">FRONT WASH — 8ch</div>
+          <div class="dmx-fixture" style="height:120px;">
+            <div class="dmx-channel" style="height:95%;background:linear-gradient(0deg,#ff2222,#ff6666);"></div>
+            <div class="dmx-channel" style="height:40%;background:linear-gradient(0deg,#22ff22,#66ff66);"></div>
+            <div class="dmx-channel" style="height:75%;background:linear-gradient(0deg,#2222ff,#6666ff);"></div>
+            <div class="dmx-channel" style="height:100%;background:linear-gradient(0deg,#ffffff,#cccccc);"></div>
+            <div class="dmx-channel" style="height:20%;background:linear-gradient(0deg,#ffaa00,#ffcc44);"></div>
+            <div class="dmx-channel" style="height:0%;background:#444;"></div>
+            <div class="dmx-channel" style="height:60%;background:linear-gradient(0deg,#aa00ff,#cc44ff);"></div>
+            <div class="dmx-channel" style="height:85%;background:linear-gradient(0deg,#888,#bbb);"></div>
+          </div>
+          <div class="dmx-label" style="margin-top:1rem;">REAR PAR — 4ch</div>
+          <div class="dmx-fixture" style="height:80px;">
+            <div class="dmx-channel" style="height:30%;background:linear-gradient(0deg,#ff2222,#ff6666);"></div>
+            <div class="dmx-channel" style="height:90%;background:linear-gradient(0deg,#22ff22,#66ff66);"></div>
+            <div class="dmx-channel" style="height:60%;background:linear-gradient(0deg,#2222ff,#6666ff);"></div>
+            <div class="dmx-channel" style="height:100%;background:linear-gradient(0deg,#888,#bbb);"></div>
+          </div>
+          <div class="dmx-label" style="margin-top:1rem;">MOVERS — 12ch</div>
+          <div class="dmx-fixture" style="height:100px;">
+            <div class="dmx-channel" style="height:45%;background:linear-gradient(0deg,#ff2222,#ff6666);"></div>
+            <div class="dmx-channel" style="height:70%;background:linear-gradient(0deg,#22ff22,#66ff66);"></div>
+            <div class="dmx-channel" style="height:85%;background:linear-gradient(0deg,#2222ff,#6666ff);"></div>
+            <div class="dmx-channel" style="height:50%;background:linear-gradient(0deg,#ffffff,#cccccc);"></div>
+            <div class="dmx-channel" style="height:0%;background:#444;"></div>
+            <div class="dmx-channel" style="height:0%;background:#444;"></div>
+            <div class="dmx-channel" style="height:35%;background:linear-gradient(0deg,#ffaa00,#ffcc44);"></div>
+            <div class="dmx-channel" style="height:100%;background:linear-gradient(0deg,#888,#bbb);"></div>
+            <div class="dmx-channel" style="height:65%;background:linear-gradient(0deg,#44aaff,#88ccff);"></div>
+            <div class="dmx-channel" style="height:30%;background:linear-gradient(0deg,#44aaff,#88ccff);"></div>
+            <div class="dmx-channel" style="height:80%;background:linear-gradient(0deg,#aa00ff,#cc44ff);"></div>
+            <div class="dmx-channel" style="height:55%;background:linear-gradient(0deg,#888,#bbb);"></div>
+          </div>
+        </div>
+        <div class="dmx-status"><span class="dmx-dot"></span> DMX</div>
+      </div>
+    </div>
+
+    <!-- GwavaCUES -->
+    <div class="app-row">
+      <div>
+        <span class="app-name-badge cues-b">GwavaCUES</span>
+        <h3 class="app-title">Trigger lights live</h3>
+        <p class="app-desc">A 16-pad touchboard on your screen — mapped to the scenes and chases you designed in GwavaLIGHT. Swipe through five banks (80 cues total), set BPM for chase speed, and tap to fire DMX output. Dark and light themes with customizable pad colours. Pad 1 is always Blackout.</p>
+        <ul class="feature-list">
+          <li>4×4 touch-pad grid mapped to scenes &amp; chases</li>
+          <li>5 banks of 16 pads (80 cues per project)</li>
+          <li>BPM-synced chase playback with speed multiplier</li>
+          <li>Custom pad colours and bank names</li>
+          <li>Dark &amp; light themes</li>
+          <li>DMX output via ENTTEC USB — no MIDI hardware needed</li>
+        </ul>
+      </div>
+      <div class="app-visual">
+        <div class="pad-grid">
+          <div class="pad" style="background: rgba(255,50,50,0.15); border: 2px solid rgba(255,50,50,0.5); color: #ff6666;" onclick="this.classList.toggle('active')">SOLO</div>
+          <div class="pad" style="background: rgba(42,255,204,0.1); border: 2px solid rgba(42,255,204,0.3); color: var(--cyan);" onclick="this.classList.toggle('active')">VERSE</div>
+          <div class="pad" style="background: rgba(168,85,247,0.15); border: 2px solid rgba(168,85,247,0.4); color: var(--purple-bright);" onclick="this.classList.toggle('active')">CHORUS</div>
+          <div class="pad" style="background: rgba(135,206,235,0.1); border: 2px solid rgba(135,206,235,0.3); color: var(--blue);" onclick="this.classList.toggle('active')">BRIDGE</div>
+          <div class="pad" style="background: rgba(255,170,0,0.1); border: 2px solid rgba(255,170,0,0.3); color: #ffaa44;" onclick="this.classList.toggle('active')">WARM</div>
+          <div class="pad" style="background: rgba(42,255,204,0.1); border: 2px solid rgba(42,255,204,0.3); color: var(--cyan);" onclick="this.classList.toggle('active')">COOL</div>
+          <div class="pad" style="background: rgba(168,85,247,0.15); border: 2px solid rgba(168,85,247,0.4); color: var(--purple-bright);" onclick="this.classList.toggle('active')">STROBE</div>
+          <div class="pad" style="background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.15); color: var(--text-secondary);" onclick="this.classList.toggle('active')">SLOW</div>
+          <div class="pad" style="background: rgba(255,50,50,0.1); border: 2px solid rgba(255,50,50,0.3); color: #ff6666;" onclick="this.classList.toggle('active')">FIRE</div>
+          <div class="pad" style="background: rgba(42,255,204,0.1); border: 2px solid rgba(42,255,204,0.3); color: var(--cyan);" onclick="this.classList.toggle('active')">OCEAN</div>
+          <div class="pad" style="background: rgba(135,206,235,0.1); border: 2px solid rgba(135,206,235,0.3); color: var(--blue);" onclick="this.classList.toggle('active')">UV</div>
+          <div class="pad" style="background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.2); color: var(--text-primary);" onclick="this.classList.toggle('active')">WHITE</div>
+          <div class="pad" style="background: rgba(168,85,247,0.15); border: 2px solid rgba(168,85,247,0.4); color: var(--purple-bright);" onclick="this.classList.toggle('active')">CHASE1</div>
+          <div class="pad" style="background: rgba(255,170,0,0.1); border: 2px solid rgba(255,170,0,0.3); color: #ffaa44;" onclick="this.classList.toggle('active')">CHASE2</div>
+          <div class="pad" style="background: rgba(42,255,204,0.1); border: 2px solid rgba(42,255,204,0.3); color: var(--cyan);" onclick="this.classList.toggle('active')">CHASE3</div>
+          <div class="pad" style="background: rgba(10,10,10,0.8); border: 2px solid rgba(255,50,50,0.6); color: #ff4444; font-weight:800;" onclick="this.classList.toggle('active')">⬤ BO</div>
+        </div>
+        <div class="dmx-status"><span class="dmx-dot"></span> BANK 1</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="download-section" id="download">
+  <div class="container">
+    <h2 class="download-title">Ready to level up<br>your show?</h2>
+    <p class="download-desc">All three apps are available on the Mac App Store. Start with the one that fits your setup — they share data automatically.</p>
+    <div class="store-buttons">
+      <a href="#" class="store-btn gig-store">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 16.56 2.93 11.3 4.7 7.72C5.57 5.94 7.36 4.86 9.28 4.84C10.56 4.81 11.78 5.7 12.55 5.7C13.33 5.7 14.85 4.62 16.4 4.8C17.07 4.83 18.96 5.09 20.18 6.88C20.07 6.95 17.68 8.32 17.71 11.16C17.74 14.56 20.68 15.67 20.71 15.68C20.69 15.74 20.21 17.44 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="currentColor"/></svg>
+        <div class="store-btn-inner">
+          <span class="store-sub">Download</span>
+          <span class="store-app-name">GwavaGIG</span>
+        </div>
+      </a>
+      <a href="#" class="store-btn light-store">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 16.56 2.93 11.3 4.7 7.72C5.57 5.94 7.36 4.86 9.28 4.84C10.56 4.81 11.78 5.7 12.55 5.7C13.33 5.7 14.85 4.62 16.4 4.8C17.07 4.83 18.96 5.09 20.18 6.88C20.07 6.95 17.68 8.32 17.71 11.16C17.74 14.56 20.68 15.67 20.71 15.68C20.69 15.74 20.21 17.44 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="currentColor"/></svg>
+        <div class="store-btn-inner">
+          <span class="store-sub">Download</span>
+          <span class="store-app-name">GwavaLIGHT</span>
+        </div>
+      </a>
+      <a href="#" class="store-btn cues-store">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 16.56 2.93 11.3 4.7 7.72C5.57 5.94 7.36 4.86 9.28 4.84C10.56 4.81 11.78 5.7 12.55 5.7C13.33 5.7 14.85 4.62 16.4 4.8C17.07 4.83 18.96 5.09 20.18 6.88C20.07 6.95 17.68 8.32 17.71 11.16C17.74 14.56 20.68 15.67 20.71 15.68C20.69 15.74 20.21 17.44 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="currentColor"/></svg>
+        <div class="store-btn-inner">
+          <span class="store-sub">Download</span>
+          <span class="store-app-name">GwavaCUES</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 IG Labs · <a href="mailto:ian.gotts@gmail.com">Contact</a> · Built for musicians, by musicians.</p>
+</footer>
+
 </body>
 </html>
