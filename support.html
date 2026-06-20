@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — GwavaTRACKS</title>
+<meta name="description" content="Guides, setup walkthroughs, and release notes for GwavaTRACKS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0e17; --deep:#0f1120; --panel:#141828; --card:#1a1f32;
+  --border:#252a40; --border2:#2e3450; --muted:#4a5270; --dim:#6b7599;
+  --soft:#9ba5c8; --light:#c8cedd; --white:#e8eaf2;
+  --teal:#2affcc; --teal2:#00e5b0; --teal-dim:rgba(42,255,204,0.1);
+  --ease:cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:var(--teal);text-decoration:none;transition:color .15s var(--ease)}
+a:hover{color:var(--teal2)}
+img{display:block;max-width:100%}
+
+/* NAV (mirrors index.html) */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:58px;background:rgba(12,14,23,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-logo{font-size:1rem;font-weight:800;color:var(--white);text-decoration:none}
+.nav-logo .t{color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--teal);color:var(--bg) !important;font-weight:700 !important;padding:7px 18px;border-radius:4px;transition:background .15s !important}
+.nav-cta:hover{background:var(--teal2) !important}
+
+/* PAGE SHELL */
+main.support{max-width:1180px;margin:0 auto;padding:120px 60px 96px}
+
+/* HERO */
+.gw-support .support-hero{max-width:760px;margin-bottom:40px}
+.gw-support .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'Inconsolata',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.gw-support .eyebrow::before{content:'//';color:var(--muted)}
+.gw-support .support-hero h1{font-size:clamp(2.1rem,3.4vw,3rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;margin-bottom:14px}
+.gw-support .support-hero h1 .t{color:var(--teal)}
+.gw-support .support-hero .lede{font-size:1rem;color:var(--soft);max-width:600px;line-height:1.75}
+
+/* SEARCH */
+.gw-support .support-search{position:relative;max-width:480px;margin:0 0 18px}
+.gw-support .support-search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--dim);pointer-events:none}
+.gw-support .support-search input{width:100%;font-family:'Inter',sans-serif;font-size:0.95rem;padding:12px 40px 12px 42px;border:1px solid var(--border);border-radius:5px;background:var(--panel);color:var(--white);transition:border-color .15s var(--ease),box-shadow .15s var(--ease)}
+.gw-support .support-search input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(42,255,204,0.14)}
+.gw-support .support-search input::placeholder{color:var(--muted)}
+.gw-support .support-search input::-webkit-search-cancel-button{-webkit-appearance:none}
+.gw-support .support-search__clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:none;background:transparent;border-radius:5px;color:var(--dim);cursor:pointer;font-size:20px;line-height:1;display:none;align-items:center;justify-content:center;transition:background-color .15s,color .15s}
+.gw-support .support-search--has-value .support-search__clear{display:inline-flex}
+.gw-support .support-search__clear:hover{background:var(--card);color:var(--white)}
+
+/* CHIPS */
+.gw-support .support-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 36px}
+.gw-support .chip{font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.04em;padding:7px 15px;border-radius:999px;cursor:pointer;border:1px solid var(--border);background:var(--panel);color:var(--soft);transition:background-color .15s var(--ease),border-color .15s var(--ease),color .15s var(--ease)}
+.gw-support .chip:hover{background:var(--card);color:var(--white)}
+.gw-support .chip:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.gw-support .chip--active{background:var(--teal);border-color:var(--teal);color:var(--bg);font-weight:700}
+.gw-support .chip--active:hover{background:var(--teal2);border-color:var(--teal2);color:var(--bg)}
+
+/* CARD GRID */
+.gw-support .card-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.gw-support .card{border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--panel);transition:border-color .16s var(--ease),transform .16s var(--ease),box-shadow .16s var(--ease)}
+.gw-support .card:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:0 14px 34px -16px rgba(42,255,204,0.35)}
+.gw-support .card__link{display:flex;flex-direction:column;height:100%;color:inherit;cursor:pointer}
+.gw-support .card__link:hover{color:inherit}
+.gw-support .card__body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.gw-support .card__cats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:13px}
+.gw-support .card__cat{font-family:'Inconsolata',monospace;font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);background:var(--teal-dim);padding:3px 9px;border-radius:999px}
+.gw-support .card__title{font-size:1.12rem;font-weight:700;line-height:1.3;letter-spacing:-0.015em;margin:0 0 9px;color:var(--white);transition:color .15s var(--ease)}
+.gw-support .card:hover .card__title{color:var(--teal)}
+.gw-support .card__excerpt{font-size:0.88rem;color:var(--dim);margin:0 0 18px;flex:1;line-height:1.65}
+.gw-support .card__meta{display:flex;align-items:center;justify-content:space-between;font-family:'Inconsolata',monospace;font-size:0.72rem;letter-spacing:0.08em;color:var(--muted);margin-top:auto}
+.gw-support .card__cta{color:var(--teal);font-weight:500}
+
+/* SKELETON */
+.gw-support .card--skeleton{pointer-events:none}
+.gw-support .sk{background:var(--card);border-radius:5px;position:relative;overflow:hidden}
+.gw-support .sk--line{height:14px;margin:12px 22px 0}
+.gw-support .card--skeleton .card__body{padding-bottom:26px}
+.gw-support .sk--short{width:55%}
+.gw-support .sk::after{content:'';position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(155,165,200,0.12),transparent);animation:gw-shimmer 1.3s infinite}
+@keyframes gw-shimmer{100%{transform:translateX(100%)}}
+
+/* NOTICES */
+.gw-support .notice{border:1px dashed var(--border2);border-radius:8px;padding:48px 32px;text-align:center;color:var(--dim)}
+.gw-support .notice h2{margin:0 0 8px;font-size:1.25rem;color:var(--white);font-weight:700}
+.gw-support .notice p{margin:0 auto;max-width:460px;font-size:0.95rem}
+
+/* MODAL */
+.gw-support .gw-modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px}
+.gw-support .gw-modal[hidden]{display:none}
+.gw-support .gw-modal__backdrop{position:absolute;inset:0;background:rgba(6,8,15,0.74);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:gw-fade .16s var(--ease)}
+.gw-support .gw-modal__dialog{position:relative;width:100%;max-width:760px;max-height:90vh;background:var(--panel);border:1px solid var(--border2);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 28px 70px -14px rgba(0,0,0,0.75);animation:gw-pop .18s var(--ease)}
+.gw-support .gw-modal__dialog::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 4%,var(--teal) 50%,transparent 96%);z-index:2}
+.gw-support .gw-modal__close{position:absolute;top:13px;right:13px;z-index:3;width:36px;height:36px;border-radius:50%;border:1px solid var(--border2);cursor:pointer;background:var(--card);color:var(--soft);font-size:22px;line-height:1;display:inline-flex;align-items:center;justify-content:center;transition:background-color .15s,color .15s,border-color .15s}
+.gw-support .gw-modal__close:hover{background:var(--border);color:var(--white);border-color:var(--teal)}
+.gw-support .gw-modal__scroll{overflow-y:auto}
+.gw-support .gw-modal__header{padding:30px 34px 0}
+.gw-support .gw-modal__date{font-family:'Inconsolata',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);opacity:.85}
+.gw-support .gw-modal__title{font-size:1.75rem;font-weight:800;line-height:1.2;letter-spacing:-0.02em;margin:8px 0 0;color:var(--white)}
+.gw-support .gw-modal__body{padding:22px 34px 8px;color:var(--light);font-size:1rem;line-height:1.75}
+.gw-support .gw-modal__body p{margin:0 0 16px}
+.gw-support .gw-modal__body img,.gw-support .gw-modal__body iframe{max-width:100%;height:auto;border-radius:6px;margin:6px 0 16px}
+.gw-support .gw-modal__body h2,.gw-support .gw-modal__body h3{color:var(--white);font-weight:700;letter-spacing:-0.01em;line-height:1.25}
+.gw-support .gw-modal__body h2{font-size:1.35rem;margin:28px 0 10px}
+.gw-support .gw-modal__body h3{font-size:1.12rem;margin:22px 0 8px;color:var(--light)}
+.gw-support .gw-modal__body a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.gw-support .gw-modal__body a:hover{color:var(--teal2)}
+.gw-support .gw-modal__body ul,.gw-support .gw-modal__body ol{padding-left:22px;margin:0 0 16px}
+.gw-support .gw-modal__body li{margin-bottom:6px}
+.gw-support .gw-modal__body blockquote{margin:0 0 16px;padding:4px 0 4px 16px;border-left:3px solid var(--teal);color:var(--soft)}
+.gw-support .gw-modal__body pre{background:var(--deep);border:1px solid var(--border);padding:14px 16px;border-radius:6px;overflow-x:auto;font-family:'Inconsolata',monospace;font-size:0.86rem;margin:0 0 16px}
+.gw-support .gw-modal__body code{font-family:'Inconsolata',monospace;font-size:0.86rem;background:var(--deep);padding:2px 6px;border-radius:4px}
+.gw-support .gw-modal__body pre code{background:none;padding:0}
+.gw-support .gw-modal__body figure{margin:0 0 16px}
+.gw-support .gw-modal__body figcaption{font-size:0.78rem;color:var(--muted);margin-top:6px;text-align:center}
+.gw-support .gw-modal__loading{display:flex;align-items:center;gap:12px;color:var(--dim);padding:24px 0}
+.gw-support .gw-modal__spinner{width:18px;height:18px;border:2px solid var(--border2);border-top-color:var(--teal);border-radius:50%;animation:gw-spin .8s linear infinite;flex-shrink:0}
+@keyframes gw-spin{to{transform:rotate(360deg)}}
+.gw-support .gw-modal__err a{color:var(--teal)}
+.gw-support .gw-modal__footer{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 34px 30px;margin-top:8px;border-top:1px solid var(--border)}
+.gw-support .gw-modal__footer a{font-family:'Inconsolata',monospace;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.gw-support .gw-modal__closebtn{font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.04em;padding:9px 20px;border-radius:5px;border:1px solid var(--border2);background:transparent;color:var(--light);cursor:pointer;transition:background-color .15s,border-color .15s,color .15s}
+.gw-support .gw-modal__closebtn:hover{background:var(--card);border-color:var(--teal);color:var(--white)}
+@keyframes gw-fade{from{opacity:0}to{opacity:1}}
+@keyframes gw-pop{from{opacity:0;transform:translateY(8px) scale(.99)}to{opacity:1;transform:none}}
+body.gw-modal-open{overflow:hidden}
+
+/* FOOTER (mirrors index.html) */
+footer{background:var(--deep);border-top:1px solid var(--border);padding:56px 60px 30px;margin-top:40px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-size:1.05rem;font-weight:800;color:var(--white);margin-bottom:10px}
+.footer-brand .t{color:var(--teal)}
+.footer-tagline{font-size:0.85rem;color:var(--dim);line-height:1.6;max-width:240px}
+.footer-col h6{font-family:'Inconsolata',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:9px}
+.footer-col a{font-size:0.85rem;color:var(--soft)}
+.footer-col a:hover{color:var(--teal)}
+.footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-copy{font-family:'Inconsolata',monospace;font-size:0.7rem;letter-spacing:0.1em;color:var(--muted)}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  nav{padding:0 20px}
+  .nav-links li:not(:last-child):not(.nav-keep){display:none}
+  main.support{padding:96px 24px 72px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .gw-support .support-hero h1{font-size:1.9rem}
+  .gw-support .gw-modal{padding:0}
+  .gw-support .gw-modal__dialog{max-width:none;max-height:100vh;height:100vh;border-radius:0}
+  .gw-support .gw-modal__title{font-size:1.45rem}
+  .gw-support .gw-modal__header{padding:30px 20px 0}
+  .gw-support .gw-modal__body{padding:20px 20px 8px}
+  .gw-support .gw-modal__footer{padding:18px 20px 24px}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .gw-support .card,.gw-support .card:hover{transition:none;transform:none}
+  .gw-support .sk::after{animation:none}
+  .gw-support .gw-modal__backdrop,.gw-support .gw-modal__dialog{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html"><span class="t">Gwava</span>TRACKS</a>
+  <ul class="nav-links">
+    <li><a href="index.html#gig">GIG Features</a></li>
+    <li><a href="index.html#lighting">PRO Lighting</a></li>
+    <li><a href="index.html#companions">Remote control</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li class="nav-keep"><a href="support.html" class="active">Support</a></li>
+    <li class="nav-keep"><a href="index.html#pricing" class="nav-cta">Try Free</a></li>
+  </ul>
+</nav>
+
+<main class="support">
+  <div class="gw-support">
+    <header class="support-hero">
+      <p class="eyebrow">Support</p>
+      <h1>Help &amp; <span class="t">articles</span></h1>
+      <p class="lede">
+        Setup walkthroughs, CSV and DMX guides, and release notes for GwavaTRACKS.
+        Can't find what you need? Email
+        <a href="mailto:support@gwava.app">support@gwava.app</a>.
+      </p>
+    </header>
+
+    <!-- Search (revealed once posts load) -->
+    <div id="post-search" class="support-search" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input id="post-search-input" type="search" autocomplete="off"
+             placeholder="Search articles…" aria-label="Search articles by title or excerpt" />
+      <button id="post-search-clear" class="support-search__clear" type="button" aria-label="Clear search">×</button>
+    </div>
+
+    <!-- Category chips (populated + revealed by script) -->
+    <div id="post-chips" class="support-chips" role="group" aria-label="Filter by category" hidden></div>
+
+    <!-- Loading skeletons -->
+    <ul id="post-grid" class="card-grid" role="list" aria-busy="true">
+      <li class="card card--skeleton"><div class="card__body"><div class="sk sk--line"></div><div class="sk sk--line sk--short"></div></div></li>
+      <li class="card card--skeleton"><div class="card__body"><div class="sk sk--line"></div><div class="sk sk--line sk--short"></div></div></li>
+      <li class="card card--skeleton"><div class="card__body"><div class="sk sk--line"></div><div class="sk sk--line sk--short"></div></div></li>
+    </ul>
+
+    <div id="post-noresults" class="notice" hidden>
+      <h2>No matching articles</h2>
+      <p id="post-noresults-msg"></p>
+    </div>
+
+    <div id="post-empty" class="notice" hidden>
+      <h2>No articles yet</h2>
+      <p>Once posts are published they'll show up here. In the meantime, reach us at
+         <a href="mailto:support@gwava.app">support@gwava.app</a>.</p>
+    </div>
+
+    <div id="post-error" class="notice" hidden>
+      <h2>Couldn't load articles</h2>
+      <p>Something went wrong fetching the latest posts. You can read them on the
+         <a href="https://gwavaapp.wordpress.com" target="_blank" rel="noopener">blog</a>,
+         or email <a href="mailto:support@gwava.app">support@gwava.app</a>.</p>
+    </div>
+
+    <!-- Article modal -->
+    <div id="post-modal" class="gw-modal" hidden aria-hidden="true">
+      <div class="gw-modal__backdrop" data-close></div>
+      <div class="gw-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="gw-modal-title">
+        <button class="gw-modal__close" type="button" data-close aria-label="Close article">×</button>
+        <div class="gw-modal__scroll">
+          <div class="gw-modal__header">
+            <span class="gw-modal__date" id="gw-modal-date"></span>
+            <h1 class="gw-modal__title" id="gw-modal-title"></h1>
+          </div>
+          <div class="gw-modal__body" id="gw-modal-body"></div>
+          <div class="gw-modal__footer">
+            <a id="gw-modal-source" href="#" target="_blank" rel="noopener">Open on the blog ↗</a>
+            <button class="gw-modal__closebtn" type="button" data-close>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><span class="t">Gwava</span>TRACKS</div>
+      <p class="footer-tagline">Built for live bands. Built by working musicians.</p>
+    </div>
+    <div class="footer-col">
+      <h6>Product</h6>
+      <ul>
+        <li><a href="index.html#gig">GIG Features</a></li>
+        <li><a href="index.html#lighting">PRO Lighting</a></li>
+        <li><a href="index.html#companions">Companion Apps</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h6>Support</h6>
+      <ul>
+        <li><a href="support.html">Help &amp; Articles</a></li>
+        <li><a href="https://gwavaapp.wordpress.com" target="_blank" rel="noopener">Blog</a></li>
+        <li><a href="mailto:support@gwava.app">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h6>Download</h6>
+      <ul>
+        <li><a href="index.html#pricing">Mac App Store</a></li>
+        <li><a href="index.html#companions">GwavaTRACKS for iPad</a></li>
+        <li><a href="index.html#companions">for iPhone</a></li>
+        <li><a href="index.html#companions">for Android</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Gwava Live Suite — All rights reserved</span>
+    <span class="footer-copy">Requires macOS 12 Monterey or later</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  // ---- Config -----------------------------------------------------------
+  const WP_SITE = 'gwavaapp.wordpress.com';
+  const COUNT = 100; // WordPress.com's maximum per request
+  const LIST_ENDPOINT =
+    `https://public-api.wordpress.com/rest/v1.1/sites/${WP_SITE}/posts/` +
+    `?number=${COUNT}&fields=ID,title,URL,excerpt,date,categories`;
+  const postEndpoint = (id) =>
+    `https://public-api.wordpress.com/rest/v1.1/sites/${WP_SITE}/posts/${id}?fields=ID,content`;
+
+  // ---- Helpers ----------------------------------------------------------
+  const decodeEntities = (s) => {
+    const t = document.createElement('textarea');
+    t.innerHTML = s;
+    return t.value;
+  };
+  const stripHtml = (html) =>
+    decodeEntities((html || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+  const truncate = (s, n = 160) =>
+    s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s;
+  const fmtDate = (iso) => {
+    const d = new Date(iso);
+    return isNaN(d) ? '' : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  };
+
+  // Categories never surfaced as chips or pills (case-insensitive).
+  const HIDDEN_CATEGORIES = new Set(['uncategorized']);
+  const categoryNames = (cats) =>
+    cats
+      ? Object.values(cats).map((c) => c.name).filter((n) => Boolean(n) && !HIDDEN_CATEGORIES.has(n.toLowerCase()))
+      : [];
+
+  const prepare = (post) => {
+    const title = decodeEntities(post.title || '').trim();
+    const excerpt = stripHtml(post.excerpt || '');
+    return {
+      id: post.ID,
+      title,
+      url: post.URL,
+      excerpt,
+      date: post.date,
+      categories: categoryNames(post.categories),
+      haystack: `${title} ${excerpt}`.toLowerCase(), // search scope: title + excerpt
+    };
+  };
+
+  // ---- Card -------------------------------------------------------------
+  function buildCard(post) {
+    const li = document.createElement('li');
+    li.className = 'card';
+
+    const link = document.createElement('a');
+    link.className = 'card__link';
+    link.href = post.url;            // real link: Cmd/Ctrl-click opens the blog
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.addEventListener('click', (e) => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      e.preventDefault();
+      openModal(post);
+    });
+
+    const body = document.createElement('div');
+    body.className = 'card__body';
+
+    if (post.categories.length) {
+      const cats = document.createElement('div');
+      cats.className = 'card__cats';
+      for (const name of post.categories) {
+        const pill = document.createElement('span');
+        pill.className = 'card__cat';
+        pill.textContent = name;
+        cats.appendChild(pill);
+      }
+      body.appendChild(cats);
+    }
+
+    const title = document.createElement('h2');
+    title.className = 'card__title';
+    title.textContent = post.title;
+    body.appendChild(title);
+
+    if (post.excerpt) {
+      const p = document.createElement('p');
+      p.className = 'card__excerpt';
+      p.textContent = truncate(post.excerpt);
+      body.appendChild(p);
+    }
+
+    const meta = document.createElement('div');
+    meta.className = 'card__meta';
+    const date = document.createElement('span');
+    date.textContent = fmtDate(post.date);
+    const cta = document.createElement('span');
+    cta.className = 'card__cta';
+    cta.textContent = 'Read →';
+    meta.append(date, cta);
+    body.appendChild(meta);
+
+    link.appendChild(body);
+    li.appendChild(link);
+    return li;
+  }
+
+  // ---- State ------------------------------------------------------------
+  let allPosts = [];
+  let activeCategory = null; // null = "All"
+  const contentCache = new Map();
+
+  const getEls = () => ({
+    grid: document.getElementById('post-grid'),
+    noresults: document.getElementById('post-noresults'),
+    noresultsMsg: document.getElementById('post-noresults-msg'),
+    empty: document.getElementById('post-empty'),
+    error: document.getElementById('post-error'),
+    search: document.getElementById('post-search'),
+    input: document.getElementById('post-search-input'),
+    clear: document.getElementById('post-search-clear'),
+    chips: document.getElementById('post-chips'),
+  });
+
+  // ---- Combined filter (category + text), then render -------------------
+  function update() {
+    const { grid, noresults, noresultsMsg, input } = getEls();
+    if (!grid || !noresults) return;
+
+    const raw = (input?.value ?? '').trim();
+    const terms = raw ? raw.toLowerCase().split(/\s+/) : [];
+
+    const matches = allPosts.filter(
+      (p) =>
+        (!activeCategory || p.categories.includes(activeCategory)) &&
+        terms.every((t) => p.haystack.includes(t)),
+    );
+
+    if (matches.length === 0) {
+      grid.hidden = true;
+      if (noresultsMsg) {
+        noresultsMsg.textContent = raw
+          ? `Nothing matched “${raw}”${activeCategory ? ` in ${activeCategory}` : ''}. Try a different word or clear the filters.`
+          : `No articles in ${activeCategory}.`;
+      }
+      noresults.hidden = false;
+      return;
+    }
+
+    noresults.hidden = true;
+    grid.hidden = false;
+    grid.replaceChildren(...matches.map(buildCard));
+  }
+
+  // ---- Chips ------------------------------------------------------------
+  function renderChips() {
+    const { chips } = getEls();
+    if (!chips) return;
+
+    const names = Array.from(new Set(allPosts.flatMap((p) => p.categories))).sort((a, b) => a.localeCompare(b));
+    if (names.length === 0) return;
+
+    const makeChip = (label, value) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip' + (value === activeCategory ? ' chip--active' : '');
+      b.textContent = label;
+      b.setAttribute('aria-pressed', String(value === activeCategory));
+      b.addEventListener('click', () => {
+        activeCategory = value;
+        chips.querySelectorAll('.chip').forEach((c) => {
+          const isActive = c === b;
+          c.classList.toggle('chip--active', isActive);
+          c.setAttribute('aria-pressed', String(isActive));
+        });
+        update();
+      });
+      return b;
+    };
+
+    chips.replaceChildren(makeChip('All', null), ...names.map((n) => makeChip(n, n)));
+    chips.hidden = false;
+  }
+
+  // ---- Search wiring ----------------------------------------------------
+  function wireSearch() {
+    const { search, input, clear } = getEls();
+    if (!search || !input) return;
+    search.hidden = false;
+
+    const sync = () => {
+      search.classList.toggle('support-search--has-value', input.value.length > 0);
+      update();
+    };
+    input.addEventListener('input', sync);
+    clear?.addEventListener('click', () => {
+      input.value = '';
+      sync();
+      input.focus();
+    });
+  }
+
+  // ---- Modal ------------------------------------------------------------
+  let modalOpen = false;
+  let lastFocused = null;
+
+  const modalEls = () => ({
+    modal: document.getElementById('post-modal'),
+    title: document.getElementById('gw-modal-title'),
+    date: document.getElementById('gw-modal-date'),
+    body: document.getElementById('gw-modal-body'),
+    source: document.getElementById('gw-modal-source'),
+  });
+
+  async function fetchContent(id) {
+    if (contentCache.has(id)) return contentCache.get(id);
+    const res = await fetch(postEndpoint(id), { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const html = data.content ?? '';
+    contentCache.set(id, html);
+    return html;
+  }
+
+  function openModal(post) {
+    const m = modalEls();
+    if (!m.modal || !m.body || !m.title) return;
+
+    lastFocused = document.activeElement;
+    m.title.textContent = post.title;
+    if (m.date) m.date.textContent = fmtDate(post.date);
+    if (m.source) m.source.href = post.url;
+    m.body.innerHTML = '<div class="gw-modal__loading"><span class="gw-modal__spinner"></span><span>Loading article…</span></div>';
+    m.modal.querySelector('.gw-modal__scroll')?.scrollTo(0, 0);
+
+    m.modal.hidden = false;
+    m.modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('gw-modal-open');
+    modalOpen = true;
+    history.pushState({ gwModal: true }, '');
+    m.modal.querySelector('.gw-modal__close')?.focus();
+    document.addEventListener('keydown', onKeydown);
+
+    fetchContent(post.id)
+      .then((html) => {
+        if (!modalOpen || !m.body) return;
+        m.body.innerHTML = html || '<p>No content available for this article.</p>';
+      })
+      .catch((err) => {
+        console.error('[support] failed to load article body:', err);
+        if (!m.body) return;
+        m.body.innerHTML =
+          `<p class="gw-modal__err">Couldn't load this article. ` +
+          `<a href="${post.url}" target="_blank" rel="noopener">Open it on the blog ↗</a></p>`;
+      });
+  }
+
+  function closeModal() {
+    const m = modalEls();
+    if (!m.modal) return;
+    m.modal.hidden = true;
+    m.modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('gw-modal-open');
+    modalOpen = false;
+    document.removeEventListener('keydown', onKeydown);
+    if (m.body) m.body.innerHTML = ''; // stop any embedded media
+    lastFocused?.focus();
+  }
+
+  // Route closes through history so Back and the close controls match.
+  function requestClose() {
+    if (history.state && history.state.gwModal) history.back();
+    else closeModal();
+  }
+
+  function onKeydown(e) {
+    if (e.key === 'Escape') { e.preventDefault(); requestClose(); return; }
+    if (e.key === 'Tab') trapFocus(e);
+  }
+
+  function trapFocus(e) {
+    const m = modalEls();
+    if (!m.modal) return;
+    const focusables = Array.from(
+      m.modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'),
+    ).filter((el) => el.offsetParent !== null);
+    if (focusables.length === 0) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+
+  function wireModal() {
+    const m = modalEls();
+    if (!m.modal) return;
+    m.modal.querySelectorAll('[data-close]').forEach((el) => el.addEventListener('click', requestClose));
+    window.addEventListener('popstate', () => { if (modalOpen) closeModal(); });
+  }
+
+  // ---- Load -------------------------------------------------------------
+  async function load() {
+    const { grid, empty, error } = getEls();
+    if (!grid || !empty || !error) return;
+
+    wireModal();
+
+    try {
+      const res = await fetch(LIST_ENDPOINT, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      allPosts = (data.posts ?? []).filter((p) => p.URL && p.title).map(prepare);
+
+      grid.setAttribute('aria-busy', 'false');
+
+      if (allPosts.length === 0) {
+        grid.hidden = true;
+        empty.hidden = false;
+        return;
+      }
+
+      renderChips();
+      wireSearch();
+      update();
+    } catch (err) {
+      console.error('[support] failed to load posts:', err);
+      grid.hidden = true;
+      error.hidden = false;
+    }
+  }
+
+  load();
+})();
+</script>
+</body>
+</html>
