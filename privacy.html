@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — GwavaTRACKS</title>
+<meta name="description" content="How the Gwava Suite and gwava.app handle your data. Local-first, no tracking, no accounts required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0e17; --deep:#0f1120; --panel:#141828; --card:#1a1f32;
+  --border:#252a40; --border2:#2e3450; --muted:#4a5270; --dim:#6b7599;
+  --soft:#9ba5c8; --light:#c8cedd; --white:#e8eaf2;
+  --teal:#2affcc; --teal2:#00e5b0; --teal-dim:rgba(42,255,204,0.1);
+  --ease:cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:var(--teal);text-decoration:none;transition:color .15s var(--ease)}
+a:hover{color:var(--teal2)}
+img{display:block;max-width:100%}
+
+/* NAV (mirrors index.html) */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:58px;background:rgba(12,14,23,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-logo{font-size:1rem;font-weight:800;color:var(--white);text-decoration:none}
+.nav-logo .t{color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}
+.nav-cta{background:var(--teal);color:var(--bg) !important;font-weight:700 !important;padding:7px 18px;border-radius:4px;transition:background .15s !important}
+.nav-cta:hover{background:var(--teal2) !important}
+
+/* PAGE SHELL */
+main.legal{max-width:1180px;margin:0 auto;padding:120px 60px 96px}
+.gw-legal{}
+
+/* HERO */
+.gw-legal .legal-hero{max-width:760px;margin-bottom:14px}
+.gw-legal .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'Inconsolata',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.gw-legal .eyebrow::before{content:'//';color:var(--muted)}
+.gw-legal .legal-hero h1{font-size:clamp(2.1rem,3.4vw,3rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;margin-bottom:14px}
+.gw-legal .legal-hero h1 .t{color:var(--teal)}
+.gw-legal .legal-hero .lede{font-size:1rem;color:var(--soft);max-width:640px;line-height:1.75}
+.gw-legal .legal-meta{font-family:'Inconsolata',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+.gw-legal .legal-meta span{color:var(--teal);opacity:.85}
+
+/* LAYOUT: sidebar TOC + content */
+.gw-legal .legal-layout{display:grid;grid-template-columns:230px 1fr;gap:56px;margin-top:48px;align-items:start}
+
+/* TOC */
+.gw-legal .legal-toc{position:sticky;top:90px}
+.gw-legal .legal-toc h6{font-family:'Inconsolata',monospace;font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.gw-legal .legal-toc ol{list-style:none;counter-reset:toc;border-left:1px solid var(--border)}
+.gw-legal .legal-toc li{counter-increment:toc}
+.gw-legal .legal-toc a{display:block;font-size:0.82rem;line-height:1.4;color:var(--dim);padding:7px 0 7px 16px;margin-left:-1px;border-left:2px solid transparent;transition:color .15s,border-color .15s}
+.gw-legal .legal-toc a::before{content:counter(toc,decimal-leading-zero) " ";font-family:'Inconsolata',monospace;font-size:0.72rem;color:var(--muted);margin-right:7px}
+.gw-legal .legal-toc a:hover{color:var(--white)}
+.gw-legal .legal-toc a.active{color:var(--teal);border-left-color:var(--teal)}
+
+/* CONTENT */
+.gw-legal .legal-body{max-width:760px;font-size:1rem;color:var(--light);line-height:1.78}
+.gw-legal .legal-body section{margin-bottom:42px;scroll-margin-top:90px}
+.gw-legal .legal-body h2{font-size:1.4rem;font-weight:800;letter-spacing:-0.02em;line-height:1.25;color:var(--white);margin:0 0 14px;display:flex;align-items:baseline;gap:12px}
+.gw-legal .legal-body h2 .num{font-family:'Inconsolata',monospace;font-size:0.9rem;font-weight:600;color:var(--teal);flex-shrink:0}
+.gw-legal .legal-body h3{font-size:1.05rem;font-weight:700;color:var(--light);margin:24px 0 8px;letter-spacing:-0.01em}
+.gw-legal .legal-body p{margin:0 0 14px}
+.gw-legal .legal-body ul{list-style:none;margin:0 0 16px;padding:0}
+.gw-legal .legal-body ul li{position:relative;padding-left:22px;margin-bottom:9px}
+.gw-legal .legal-body ul li::before{content:'';position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:2px;background:var(--teal);transform:rotate(45deg)}
+.gw-legal .legal-body strong{color:var(--white);font-weight:700}
+.gw-legal .legal-body a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.gw-legal .legal-body a:hover{color:var(--teal2)}
+.gw-legal .legal-body code{font-family:'Inconsolata',monospace;font-size:0.86rem;background:var(--deep);padding:2px 7px;border-radius:4px;color:var(--soft)}
+
+/* TLDR callout */
+.gw-legal .tldr{border:1px solid var(--border2);border-radius:10px;background:var(--panel);padding:24px 26px;margin:0 0 8px;position:relative;overflow:hidden}
+.gw-legal .tldr::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--teal),transparent)}
+.gw-legal .tldr h2{font-size:1.05rem;margin-bottom:12px}
+.gw-legal .tldr ul li::before{top:10px}
+.gw-legal .tldr p:last-child{margin-bottom:0}
+
+/* status note */
+.gw-legal .legal-note{border:1px dashed var(--border2);border-radius:8px;padding:16px 20px;font-size:0.9rem;color:var(--soft);margin:0 0 16px;background:rgba(20,24,40,0.5)}
+.gw-legal .legal-note strong{color:var(--teal)}
+
+/* contact card */
+.gw-legal .contact-card{border:1px solid var(--border);border-radius:10px;background:var(--panel);padding:22px 24px}
+.gw-legal .contact-card p{margin:0}
+.gw-legal .contact-card .lbl{font-family:'Inconsolata',monospace;font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+
+/* FOOTER (mirrors index.html) */
+footer{background:var(--deep);border-top:1px solid var(--border);padding:56px 60px 30px;margin-top:40px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-brand{font-size:1.05rem;font-weight:800;color:var(--white);margin-bottom:10px}
+.footer-brand .t{color:var(--teal)}
+.footer-tagline{font-size:0.85rem;color:var(--dim);line-height:1.6;max-width:240px}
+.footer-col h6{font-family:'Inconsolata',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:9px}
+.footer-col a{font-size:0.85rem;color:var(--soft)}
+.footer-col a:hover{color:var(--teal)}
+.footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-copy{font-family:'Inconsolata',monospace;font-size:0.7rem;letter-spacing:0.1em;color:var(--muted)}
+.footer-bottom a.footer-copy{color:var(--soft)}
+.footer-bottom a.footer-copy:hover{color:var(--teal)}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  nav{padding:0 20px}
+  .nav-links li:not(:last-child):not(.nav-keep){display:none}
+  main.legal{padding:96px 24px 72px}
+  .gw-legal .legal-layout{grid-template-columns:1fr;gap:28px}
+  .gw-legal .legal-toc{position:static;border-bottom:1px solid var(--border);padding-bottom:8px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .gw-legal .legal-hero h1{font-size:1.9rem}
+  .gw-legal .legal-body h2{font-size:1.22rem}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html"><span class="t">Gwava</span>TRACKS</a>
+  <ul class="nav-links">
+    <li><a href="index.html#gig">GIG Features</a></li>
+    <li><a href="index.html#lighting">PRO Lighting</a></li>
+    <li><a href="index.html#companions">Remote control</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li class="nav-keep"><a href="support.html">Support</a></li>
+    <li class="nav-keep"><a href="index.html#pricing" class="nav-cta">Try Free</a></li>
+  </ul>
+</nav>
+
+<main class="legal">
+  <div class="gw-legal">
+
+    <header class="legal-hero">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy <span class="t">Policy</span></h1>
+      <p class="lede">
+        The Gwava Suite is built local-first: your music, setlists, and lighting designs
+        live on your own devices, not on our servers. This policy explains exactly what
+        information the apps and the gwava.app website handle, and the few cases where
+        data leaves your machine.
+      </p>
+      <p class="legal-meta">Effective date: <span>1 June 2026</span> &nbsp;·&nbsp; Last updated: <span>June 2026</span></p>
+    </header>
+
+    <div class="legal-layout">
+
+      <!-- TOC -->
+      <aside class="legal-toc" role="navigation" aria-label="Sections">
+        <h6>On this page</h6>
+        <ol>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#scope">Who this covers</a></li>
+          <li><a href="#collect">What we collect</a></li>
+          <li><a href="#use">How we use it</a></li>
+          <li><a href="#never">What we never do</a></li>
+          <li><a href="#third-parties">Third-party services</a></li>
+          <li><a href="#retention">Storage &amp; deletion</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#international">International users</a></li>
+          <li><a href="#rights">Your rights</a></li>
+          <li><a href="#changes">Changes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </aside>
+
+      <!-- BODY -->
+      <div class="legal-body">
+
+        <section id="summary">
+          <div class="tldr">
+            <h2>The short version</h2>
+            <ul>
+              <li><strong>Your work stays on your device.</strong> Projects, songs, setlists, media files, fixtures, scenes, and chases are stored locally on your Mac (and on paired devices) — not uploaded to us.</li>
+              <li><strong>No account is required</strong> to use the apps, and we don't run analytics or advertising trackers.</li>
+              <li><strong>Companion remotes talk over your local network only</strong> (Wi-Fi or Bluetooth) — the connection between your Mac and your iPad, iPhone, or Android remote does not pass through our servers.</li>
+              <li><strong>Two exceptions send data off-device:</strong> the optional AI lighting-design feature (which uses an AI provider you configure with your own key), and purchases (which are handled by Apple). Both are detailed below.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="scope">
+          <h2><span class="num">01</span> Who this policy covers</h2>
+          <p>
+            This policy applies to the <strong>Gwava Suite</strong> of applications — GwavaTRACKS and
+            GwavaLIGHTS for macOS, and the companion remote apps GwavaTRACKS for iPad, iPhone, and
+            Android, and GwavaLIGHTS for iPad/iPhone — together with the <strong>gwava.app</strong>
+            website and its support area.
+          </p>
+          <div class="legal-note">
+            <strong>Beta status.</strong> The Gwava Suite is currently in development and beta testing.
+            The apps are not yet for sale, and our backend services are not yet live. Sections describing
+            purchases and server-side features explain how those features will work once released; until
+            then they are inactive. We'll update the effective date above whenever this changes.
+          </div>
+          <p>
+            In this policy, &ldquo;we&rdquo;, &ldquo;us&rdquo;, and &ldquo;Gwava&rdquo; refer to the makers
+            of the Gwava Suite <em>[insert your legal entity name and registered address here]</em>.
+            &ldquo;You&rdquo; means the performer, lighting engineer, or visitor using the apps or website.
+          </p>
+        </section>
+
+        <section id="collect">
+          <h2><span class="num">02</span> What information we handle</h2>
+
+          <h3>Content you create and store</h3>
+          <p>
+            Everything you build in the apps — project names, song titles and artists, BPM, setlists,
+            venue names and dates, lighting fixtures, scenes, chases, and the audio, video, and MIDI
+            files you import — is written to your device's local storage (for example, a
+            <code>projects.data</code> file and per-project folders in your Documents directory). This
+            content stays on your device. We do not have access to it, and it is not transmitted to us.
+          </p>
+
+          <h3>Microphone and audio input (GwavaLIGHTS)</h3>
+          <p>
+            GwavaLIGHTS can listen to the room through your Mac's microphone or line-in to detect tempo
+            and lock its lighting chases to the beat. This audio is processed in real time on your device
+            for beat detection only. It is <strong>not recorded, stored, or transmitted</strong> anywhere.
+            macOS will ask for your permission before the app can access the microphone, and you can revoke
+            that permission at any time in System Settings.
+          </p>
+
+          <h3>Connections to companion remotes</h3>
+          <p>
+            The remote apps connect to your Mac over your local network — using Apple's local peer-to-peer
+            networking (Wi-Fi) for the iPad and iPhone remotes, a direct local TCP connection for the
+            Android remote, and Bluetooth Low Energy MIDI for the GwavaLIGHTS pad remote. These connections
+            carry playback commands and the current performance state between your own devices. They do not
+            route through Gwava servers and are not visible to us.
+          </p>
+
+          <h3>AI lighting design (optional)</h3>
+          <p>
+            GwavaLIGHTS includes an optional feature that turns a natural-language description into a
+            lighting design. If you choose to use it, the text prompt you write is sent to a third-party AI
+            provider to generate the result. To use this feature you supply your own API key, which is
+            stored securely in the macOS Keychain on your device. When you use this feature:
+          </p>
+          <ul>
+            <li>Your prompt text is transmitted to the AI provider you have configured.</li>
+            <li>That provider's handling of your prompt is governed by <strong>their</strong> privacy policy and terms, not ours.</li>
+            <li>If you never use the feature, no prompt data ever leaves your device.</li>
+          </ul>
+
+          <h3>Purchases and licensing</h3>
+          <p>
+            When the apps are released for sale, purchases will be processed by <strong>Apple</strong>
+            through the App Store using StoreKit. Apple handles your payment and receives the associated
+            transaction details; <strong>we do not collect or see your payment-card information</strong>.
+            The apps validate your purchase entitlement (Trial, Gig, or Pro) locally on your device. If we
+            later enable optional server-side verification to confirm entitlements across your devices, the
+            verification will involve Apple-issued purchase identifiers and a license record — not your
+            payment details — and we will update this policy with the specifics before that goes live.
+          </p>
+
+          <h3>The website and support articles</h3>
+          <p>
+            The gwava.app website is served as static pages. Like any website, the hosting provider may
+            record standard technical server logs (such as IP address, browser type, and the page
+            requested) for security and reliability. The support area loads help articles and release notes
+            from our blog hosted on WordPress.com; loading those articles involves a request to WordPress.com,
+            whose own privacy practices apply to that request.
+          </p>
+
+          <h3>When you contact us</h3>
+          <p>
+            If you email <a href="mailto:support@gwava.app">support@gwava.app</a>, we receive the contents
+            of your message and your email address so we can reply and provide support. We keep support
+            correspondence only as long as needed to help you and to keep a reasonable record of the request.
+          </p>
+        </section>
+
+        <section id="use">
+          <h2><span class="num">03</span> How we use information</h2>
+          <p>We use the limited information described above only to:</p>
+          <ul>
+            <li>Make the apps work on your device — playing tracks, syncing video and lighting, and connecting your remotes.</li>
+            <li>Generate AI lighting designs when you explicitly request them.</li>
+            <li>Verify your purchase so the right features are unlocked.</li>
+            <li>Respond to your support requests.</li>
+            <li>Keep the website and services secure and working.</li>
+          </ul>
+          <p>We do not use your content to build advertising profiles or to train our own models.</p>
+        </section>
+
+        <section id="never">
+          <h2><span class="num">04</span> What we never do</h2>
+          <ul>
+            <li>We don't sell or rent your personal information.</li>
+            <li>We don't show third-party ads in the apps.</li>
+            <li>We don't run cross-site or cross-app advertising trackers.</li>
+            <li>We don't run usage analytics or telemetry in the apps. (Should we ever add optional, anonymised performance statistics in the future, we'll describe them here and keep them off by default unless you opt in.)</li>
+            <li>We don't access the music, video, or designs stored on your device.</li>
+          </ul>
+        </section>
+
+        <section id="third-parties">
+          <h2><span class="num">05</span> Third-party services</h2>
+          <p>A small number of outside services come into play, each only in the situations above:</p>
+          <ul>
+            <li><strong>Apple</strong> — App Store distribution and payment processing for purchases.</li>
+            <li><strong>Your chosen AI provider</strong> — only when you use the optional AI lighting-design feature with your own API key.</li>
+            <li><strong>WordPress.com (Automattic)</strong> — hosts the blog and the support articles shown in the Support area.</li>
+            <li><strong>Our website host</strong> — serves the gwava.app pages and may keep standard server logs.</li>
+          </ul>
+          <p>
+            Each of these operates under its own privacy policy. We encourage you to review the policy of
+            any AI provider you configure, since your prompts are governed by it.
+          </p>
+        </section>
+
+        <section id="retention">
+          <h2><span class="num">06</span> Storage, retention, and deletion</h2>
+          <p>
+            Because your content lives on your own device, <strong>you control it directly</strong>. You can
+            delete projects, songs, setlists, and designs from within the apps, and you can remove all app
+            data by deleting the relevant files or uninstalling the app. Deletions within the apps are
+            permanent, so the apps ask you to confirm before removing items.
+          </p>
+          <p>
+            We retain support emails only for as long as needed to handle your request. Any future license
+            records held for purchase verification will be retained for as long as required to support your
+            entitlement and to meet legal and accounting obligations.
+          </p>
+        </section>
+
+        <section id="security">
+          <h2><span class="num">07</span> Security</h2>
+          <p>
+            Your content is protected by the security of your own device and operating system. Sensitive
+            values such as the AI provider API key are stored in the macOS Keychain rather than in plain
+            files. Connections to companion remotes stay on your local network. No method of storage or
+            transmission is ever completely secure, but we design the suite to keep your data on your own
+            equipment wherever possible.
+          </p>
+        </section>
+
+        <section id="children">
+          <h2><span class="num">08</span> Children</h2>
+          <p>
+            The Gwava Suite is a professional tool for live performers and is not directed to children. We
+            do not knowingly collect personal information from children. If you believe a child has provided
+            us with personal information through our support channels, please contact us and we will remove it.
+          </p>
+        </section>
+
+        <section id="international">
+          <h2><span class="num">09</span> International users and data transfers</h2>
+          <p>
+            The apps keep your content on your own device wherever you are. For the limited data that does
+            involve outside services — support email, purchase processing through Apple, AI prompts to your
+            chosen provider, and website hosting — that information may be processed in countries other than
+            your own, including the United States. Where required, those providers apply their own safeguards
+            for international transfers.
+          </p>
+        </section>
+
+        <section id="rights">
+          <h2><span class="num">10</span> Your rights</h2>
+          <p>
+            Depending on where you live (for example under the EU/UK GDPR or the California Consumer Privacy
+            Act), you may have rights to access, correct, delete, or port personal information we hold about
+            you, and to object to or restrict certain processing. Because most of your data sits on your own
+            device, you can exercise many of these rights directly inside the apps. For information that
+            involves us — such as support correspondence — you can make a request by emailing
+            <a href="mailto:support@gwava.app">support@gwava.app</a>, and we will respond as required by law.
+            You also have the right to lodge a complaint with your local data-protection authority.
+          </p>
+        </section>
+
+        <section id="changes">
+          <h2><span class="num">11</span> Changes to this policy</h2>
+          <p>
+            As the suite moves out of beta and we turn on features like purchases and optional server
+            verification, we'll update this policy to match. When we make a material change, we'll revise the
+            effective date at the top of the page. Significant changes may also be announced on the website
+            or in the apps.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2><span class="num">12</span> Contact</h2>
+          <p>Questions about this policy or your data? Get in touch:</p>
+          <div class="contact-card">
+            <p>
+              <span class="lbl">Email</span>
+              <a href="mailto:support@gwava.app">support@gwava.app</a>
+            </p>
+          </div>
+          <p style="margin-top:16px;color:var(--dim);font-size:0.9rem">
+            <em>This page is a plain-language privacy policy for the Gwava Suite. It is not legal advice;
+            before publishing, confirm the bracketed legal-entity details and have it reviewed against the
+            laws that apply to you.</em>
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><span class="t">Gwava</span>TRACKS</div>
+      <p class="footer-tagline">Built for live bands. Built by working musicians.</p>
+    </div>
+    <div class="footer-col">
+      <h6>Product</h6>
+      <ul>
+        <li><a href="index.html#gig">GIG Features</a></li>
+        <li><a href="index.html#lighting">PRO Lighting</a></li>
+        <li><a href="index.html#companions">Companion Apps</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h6>Support</h6>
+      <ul>
+        <li><a href="support.html">Help &amp; Articles</a></li>
+        <li><a href="https://gwavaapp.wordpress.com" target="_blank" rel="noopener">Blog</a></li>
+        <li><a href="mailto:support@gwava.app">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h6>Legal</h6>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Gwava Live Suite — All rights reserved</span>
+    <a class="footer-copy" href="privacy.html">Privacy Policy</a>
+    <span class="footer-copy">Requires macOS 12 Monterey or later</span>
+  </div>
+</footer>
+
+<script>
+// Highlight the current section in the table of contents while scrolling.
+(() => {
+  const links = Array.from(document.querySelectorAll('.legal-toc a'));
+  const map = new Map();
+  links.forEach((a) => {
+    const id = a.getAttribute('href').slice(1);
+    const sec = document.getElementById(id);
+    if (sec) map.set(sec, a);
+  });
+  if (!map.size) return;
+
+  const setActive = (link) => {
+    links.forEach((l) => l.classList.toggle('active', l === link));
+  };
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) setActive(map.get(e.target));
+    });
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+  map.forEach((_, sec) => io.observe(sec));
+})();
+</script>
+</body>
+</html>
